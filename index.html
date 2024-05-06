@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My portfolio</title>
+    <link rel="stylesheet" type="text/css" target="_blank" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+       <h1>My Portfolio</h1>
+      </div>
+      <ul>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#edu">Education</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+    <div class="menubar">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#edu">Education</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <div id="about">
+      <p id="name"><b>Hello! I'm <font color="#2402C7">Reham Mahmoud</font> --</b></p>
+      <p id="Title">I'm a Beginner Software Tester</p>
+      <p id="Description">I am currently studying at Sinai University majoring in Information Technology.<br>Sometimes have the motivation
+        to learn and improve new skills. I hope to<br> develop further in the future to gain real world work<br>experience in software testing.</p>
+      <button class="hire">Hire me</button>
+      <button class="cv">Download CV</button>
+      <div class="socialmedia">
+        <a href="#"><img src="./images/linkedin.png"></a>
+        <a href="#"><img src="./images/github.png"></a>
+        <a href="#"><img src="./images/facebook.png"></a>
+        <a href="https://www.instagram.com/reham.03_/"><img src="./images/instagram.png"></a>
+      </div>
+    </div>
+    <div class="avatar">
+      <img src="./images/avatar.jpg">
+    </div>
+    </div>
+    <div id="edu">
+      <p class="edu-title">Education</p>
+      <div class="line-1"><img src="./images/substract.png"></div>
+      <p class="edu-history">History of Education</p>
+      <div class="edu-text-1">
+        <p class="card1">Sinai University</p>
+        <p class="card2">2021-now</p> 
+        <p class="card3">Majoring in Information Technology</p>
+      </div>
+      <br>
+      <div class="down"><img src="./images/down.png"></div>
+      <br>
+      <div class="edu-text-2">
+        <p class="card1">High School</p>
+        <p class="card2">2018-2021</p> 
+        <p class="card3">student</p>
+      </div>
+      <br>
+      <div class="more"><img src="./images/more-information.png"></div>
+    </div>
+    <div id="skills">
+      <p class="s-title">Skills</p>
+      <div class="line-2"><img src="./images/substract (1).png"></div>
+      <p class="s-text">Programming languages and tools</p>
+      <div class="icons-l1">
+        <img src="./images/html.png">
+        <img src="./images/social.png">
+        <img src="./images/js.png">
+        <img src="./images/php.png">
+      </div>
+      <div class="icons-l2">
+        <img src="./images/bootstrap.png">
+        <img src="./images/github(1).png">
+        <img src="./images/figma.png">
+      </div>
+    </div>
+    <hr>
+    <div id="contact">
+      <p class="c-title">Contact</p>
+      <div class="line-2"><img src="./images/substract (1).png"></div>
+      <p class="c-text">Contact me for more</p>
+      <div class="form">
+        <form class="contact" id="con" action="#" method="POST" onsubmit="return validateForm()">
+          <label><b>Name</b></label><br>
+          <input type="text" name="fullname" id="fullname" required><br><br>
+          <label><b>Email address</b></label><br>
+          <input type="email" name="email" id="email" required><br><br>
+          <label for="message" class="message"><b>Message</b></label>
+          <textarea id="message" name="message" rows="5" cols="33" required></textarea>
+          <div class="submit-button"><center><input type="submit" value="Send"></center></div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        var fullname = document.getElementById("fullname").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+      
+        if (fullname.trim() === '' || email.trim() === '' || message.trim() === '') {
+          alert("Please fill in all fields");
+          return false;
+        }
+      
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address");
+          return false;
+        }
+      
+        // If all validations pass, the form submission will proceed
+        alert("Form submitted successfully!");
+        return true;
+      }
+      </script>
+          <script src="script.js"></script>
+        </body>
+      </html>
